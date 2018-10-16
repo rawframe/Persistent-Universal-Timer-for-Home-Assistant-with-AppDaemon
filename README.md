@@ -19,6 +19,7 @@ Usage:
 Future:
 . Finish the 'custom code' action by adding a txt box and dict entry similar to rrule. Not so motivated to do so because not sure its of great benefit ... could just run a scene or script or automation ... etc to achieve same.
 . Can change to work secondly without too much effort but think it will be too much overhead for most setups.
+. Make a quick start, per second accurate, countdown timer option.
 
 Bugs:
 . A New timer currently forces the minutley scheduler to run again, so any active timers scheduled to run at that same minute will go again. May add a flag to solve or just write code to pass only that timer through the scheduler/copy.
