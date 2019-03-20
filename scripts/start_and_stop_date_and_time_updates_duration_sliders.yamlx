@@ -1,0 +1,22 @@
+# Start and Stop Date and Time Updates Duration Sliders
+
+  start_and_stop_date_and_time_updates_duration_sliders:
+    alias: "Start and Stop Date and Time Updates Duration Sliders"
+    sequence:
+      - service: input_number.set_value
+        data_template:
+          entity_id: input_number.on_duration_years
+          value: "{{(((states.input_datetime.stop_datetime.attributes.timestamp | int)-(states.input_datetime.start_datetime.attributes.timestamp | int)) | timestamp_custom('%Y', False)|int-1970)}}"
+      - service: input_number.set_value
+        data_template:
+          entity_id: input_number.on_duration_days
+          value: "{{(((states.input_datetime.stop_datetime.attributes.timestamp | int)-(states.input_datetime.start_datetime.attributes.timestamp | int)) |
+  timestamp_custom('%j', False)|int-1)}}"
+      - service: input_number.set_value
+        data_template:
+          entity_id: input_number.on_duration_hours
+          value: "{{((((states.input_datetime.stop_datetime.attributes.timestamp) - (states.input_datetime.start_datetime.attributes.timestamp)) | int |  timestamp_custom('%H', False))| int )}}"
+      - service: input_number.set_value
+        data_template:
+          entity_id: input_number.on_duration_minutes
+          value: "{{((((states.input_datetime.stop_datetime.attributes.timestamp) - (states.input_datetime.start_datetime.attributes.timestamp)) | int |  timestamp_custom('%M', False))| int )}}"

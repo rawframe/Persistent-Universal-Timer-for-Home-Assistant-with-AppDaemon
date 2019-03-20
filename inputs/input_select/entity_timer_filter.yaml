@@ -1,0 +1,14 @@
+  entity_filter_select:
+    name: 'Filter Entities by:'
+    options:
+     - All Entities
+     - Switches
+     - Lights
+     - Scripts
+     - Automations
+     - Groups
+     - Sensors
+     - Scenes
+    #  - Devices
+#    initial: None
+    icon: mdi:view-list

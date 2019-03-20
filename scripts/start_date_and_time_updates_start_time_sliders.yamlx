@@ -1,0 +1,13 @@
+# Start Date & Time Updates Start Time Sliders
+
+  start_date_and_time_updates_start_time_sliders:
+    alias: "Start Date & Time Updates Start Time Sliders"
+    sequence:
+      - service: input_number.set_value
+        data_template:
+          entity_id: input_number.on_hour
+          value: "{{(states.input_datetime.start_datetime.attributes.timestamp | int | timestamp_custom('%H', False) | int) }}"
+      - service: input_number.set_value
+        data_template:
+          entity_id: input_number.on_minute
+          value: "{{(states.input_datetime.start_datetime.attributes.timestamp | int | timestamp_custom('%M', False) | int) }}"

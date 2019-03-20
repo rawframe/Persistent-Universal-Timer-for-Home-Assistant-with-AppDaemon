@@ -1,0 +1,11 @@
+  timer_stop_sun_select:
+    name: Stop Sun Timing 
+    options:
+     - 'Off' 
+     - Dawn
+     - Sunrise
+     - Sunset
+     - Dusk
+    initial: 'Off'
+    icon: mdi:weather-sunset
+#    icon: mdi:view-list

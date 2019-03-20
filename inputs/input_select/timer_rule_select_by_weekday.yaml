@@ -1,0 +1,16 @@
+  timer_rule_select_by_weekday:
+    name: 'Only on (by)'
+    options:
+     - 'None'
+     - 'WEEKDAYS'
+     - 'WEEKENDS'
+     - 'MONDAYS'
+     - 'TUESDAYS'
+     - 'WEDNESDAYS'
+     - 'THURSDAYS'
+     - 'FRIDAYS'
+     - 'SATURDAYS'
+     - 'SUNDAYS'
+     - 'Custom'
+    initial: 'None'
+    icon: mdi:view-list

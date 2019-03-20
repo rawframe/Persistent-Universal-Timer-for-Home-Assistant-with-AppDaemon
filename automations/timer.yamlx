@@ -1,0 +1,164 @@
+# START TIME SLIDER UPDATES START DATE AND TIME AND DURATION SLIDERS
+
+- alias: Start Time Slider Updates Start Date and Time and Duration Sliders
+  trigger:
+    platform: state
+    entity_id: input_number.on_hour, input_number.on_minute
+  action:
+# Turn Off Timer Automations
+    - service: script.turn_on
+      entity_id: script.turn_off_timer_automations
+# Start Time Sliders Update Start Date and Time
+    - service: script.turn_on
+      entity_id: script.start_time_sliders_update_start_date_and_time
+# Start and Stop Date and Time Updates Duration Sliders
+    - service: script.turn_on
+      entity_id: script.start_and_stop_date_and_time_updates_duration_sliders
+# Update Live Timer Duration Sliders
+    - service: script.turn_on
+      entity_id: script.start_and_stop_date_and_time_updates_live_duration_sliders
+# Turn On Timer Automations
+    - service: script.turn_on
+      entity_id: script.turn_on_timer_automations
+
+
+# STOP TIME SLIDER UPDATES STOP DATE AND TIME AND DURATION SLIDERS
+
+- alias: Stop Time Slider Updates Stop Date and Time and Duration Sliders
+  trigger:
+    platform: state
+    entity_id: input_number.off_hour, input_number.off_minute
+  action:
+# Turn Off Timer Automations
+    - service: script.turn_on
+      entity_id: script.turn_off_timer_automations
+# Stop Time Sliders Update Stop Date and Time
+    - service: script.turn_on
+      entity_id: script.stop_time_sliders_update_stop_date_and_time
+# Start and Stop Date and Time Updates Duration Sliders
+    - service: script.turn_on
+      entity_id: script.start_and_stop_date_and_time_updates_duration_sliders
+# Update Live Timer Duration Sliders
+    - service: script.turn_on
+      entity_id: script.start_and_stop_date_and_time_updates_live_duration_sliders
+# Turn On Timer Automations
+    - service: script.turn_on
+      entity_id: script.turn_on_timer_automations
+
+
+# START DATE AND TIME UPDATES START AND STOP TIME SLIDERS AND DURATION SLIDERS 
+
+- alias: Start Date and Time Updates Start and Stop Time Sliders and Duration Sliders
+  trigger:
+    platform: state
+    entity_id: input_datetime.start_datetime
+  action:
+# Turn Off Timer Automations
+    - service: script.turn_on
+      entity_id: script.turn_off_timer_automations
+# Start and Stop Date and Time Updates Duration Sliders
+    - service: script.turn_on
+      entity_id: script.start_and_stop_date_and_time_updates_duration_sliders
+# Stop Date and Time Updates Stop Time Sliders
+    - service: script.turn_on
+      entity_id: script.stop_date_and_time_updates_stop_time_sliders
+# Start Date and Time Updates Start Time Sliders
+    - service: script.turn_on
+      entity_id: script.start_date_and_time_updates_start_time_sliders
+# Update Live Timer Duration Sliders
+    - service: script.turn_on
+      entity_id: script.start_and_stop_date_and_time_updates_live_duration_sliders
+# Turn On Timer Automations
+    - service: script.turn_on
+      entity_id: script.turn_on_timer_automations
+
+
+# STOP DATE AND TIME UPDATES START AND STOP TIME SLIDERS AND DURATION SLIDERS 
+
+- alias: Stop Date and Time Updates Start and Stop Time Sliders and Duration Sliders
+  trigger:
+    platform: state
+    entity_id: input_datetime.stop_datetime
+  action:
+# Turn Off Timer Automations
+    - service: script.turn_on
+      entity_id: script.turn_off_timer_automations
+# Start and Stop Date and Time Updates Duration Sliders
+    - service: script.turn_on
+      entity_id: script.start_and_stop_date_and_time_updates_duration_sliders
+# Stop Date and Time Updates Stop Time Sliders
+    - service: script.turn_on
+      entity_id: script.stop_date_and_time_updates_stop_time_sliders
+# Start Date and Time Updates Start Time Sliders
+    - service: script.turn_on
+      entity_id: script.start_date_and_time_updates_start_time_sliders
+# Update Live Timer Duration Sliders
+    - service: script.turn_on
+      entity_id: script.start_and_stop_date_and_time_updates_live_duration_sliders
+# Turn On Timer Automations
+    - service: script.turn_on
+      entity_id: script.turn_on_timer_automations
+
+
+# DURATION SLIDERS UPDATE START AND STOP DATE AND TIME AND START AND STOP TIME SLIDERS
+
+- alias: Update Stop Date and Time from Duration Sliders
+  trigger:
+    platform: state
+    entity_id: input_number.on_duration_years, input_number.on_duration_days, input_number.on_duration_hours, input_number.on_duration_minutes
+  action:
+# Turn Off Timer Automations
+    - service: script.turn_on
+      entity_id: script.turn_off_timer_automations
+# Duration Sliders Update Stop Date and Time
+    - service: script.turn_on
+      entity_id: script.duration_sliders_update_stop_date_and_time
+# Stop Date and Time Updates Stop Time Sliders
+    - service: script.turn_on
+      entity_id: script.stop_date_and_time_updates_stop_time_sliders
+# Update Live Timer Duration Sliders
+    - service: script.turn_on
+      entity_id: script.start_and_stop_date_and_time_updates_live_duration_sliders
+# Turn On Timer Automations
+    - service: script.turn_on
+      entity_id: script.turn_on_timer_automations
+
+
+# LIVE DURATION SLIDERS UPDATE START AND STOP DATE AND TIME AND START AND STOP TIME SLIDERS
+
+- alias: Update Stop Date and Time from Live Duration Sliders
+  trigger:
+    platform: state
+    entity_id: input_number.on_duration_years_live, input_number.on_duration_days_live, input_number.on_duration_hours_live, input_number.on_duration_minutes_live
+  action:
+# Turn Off Timer Automations
+    - service: script.turn_on
+      entity_id: script.turn_off_timer_automations
+# Live Duration Sliders Update Stop Date and Time
+    - service: script.turn_on
+      entity_id: script.live_duration_sliders_update_stop_date_and_time
+# Stop Date and Time Updates Stop Time Sliders
+    - service: script.turn_on
+      entity_id: script.stop_date_and_time_updates_stop_time_sliders
+# Start and Stop Date and Time Updates Duration Sliders
+    - service: script.turn_on
+      entity_id: script.start_and_stop_date_and_time_updates_duration_sliders
+# Turn On Timer Automations
+    - service: script.turn_on
+      entity_id: script.turn_on_timer_automations
+
+
+# UPDATE LIVE TIME DURATION SLIDERS
+
+- alias: Update Live Timer Duration Sliders
+  trigger:
+    platform: time
+    minutes: '/1'
+    seconds: 00
+#  condition:
+#    condition: template
+#    value_template: "{{((states.input_datetime.stop_datetime.attributes.timestamp | int) - (as_timestamp(now()) |int)) > 0}}"
+  action:
+# Update Live Timer Duration Sliders
+    - service: script.turn_on
+      entity_id: script.start_and_stop_date_and_time_updates_live_duration_sliders

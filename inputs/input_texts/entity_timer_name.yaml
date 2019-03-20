@@ -1,0 +1,6 @@
+  entity_timer_name:
+    name: Timer name
+#    min: 0
+#    max: 75
+    initial: enter timer name
+#    pattern: '[a-fA-F0-9]*'

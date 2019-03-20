@@ -1,0 +1,5 @@
+  rule_until:
+    name: Until date & time
+    has_date: true
+    has_time: true
+    initial: 2000-01-01 01:01

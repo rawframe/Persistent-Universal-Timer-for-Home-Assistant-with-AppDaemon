@@ -1,0 +1,8 @@
+# DELETE TIMER ENTITY
+
+  delete_timer_entity:
+    alias: "Delete Entity"
+    sequence:
+      - event: MANAGE_TIMERS
+        event_data:
+          mode: delete_timer_entity

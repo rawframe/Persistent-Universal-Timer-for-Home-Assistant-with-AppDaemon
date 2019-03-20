@@ -1,0 +1,10 @@
+  start_datetime:
+    name: Start date and time
+    has_date: true
+    has_time: true
+#    initial: 1970-04-01 01:23
+  stop_datetime:
+    name: Stop date and time
+    has_date: true
+    has_time: true
+#    initial: 1971-05-02 04:56

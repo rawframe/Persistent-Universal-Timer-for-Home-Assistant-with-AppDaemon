@@ -1,0 +1,10 @@
+# Start Time Sliders Update Start Date and Time
+
+  start_time_sliders_update_start_date_and_time:
+    alias: "Start Time Sliders Update Start Date and Time"
+    sequence:
+      - service: input_datetime.set_datetime
+        data_template:
+          entity_id: input_datetime.start_datetime
+          time: "{{ states.input_number.on_hour.state | int }}:{{ states.input_number.on_minute.state | int }}"
+          date: "{{states.input_datetime.start_datetime.attributes.year}}-{{states.input_datetime.start_datetime.attributes.month}}-{{states.input_datetime.start_datetime.attributes.day}}"

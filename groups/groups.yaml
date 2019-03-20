@@ -1,0 +1,172 @@
+  local_times:
+    view: no
+    name: Current Date & Times
+    entities:
+      - sensor.date
+      - sensor.time
+      - sun.sun
+      - sensor.next_sunrise
+      - sensor.next_sunset
+      - sensor.sunrise_to_sunset_duration
+
+  timer_management:
+    view: no
+    control: hidden
+    name: Timer Management
+    entities:
+      - input_boolean.timers
+      - input_select.timer_select
+      - input_text.entity_timer_name
+      - persistent_notification.timer_name
+      - input_boolean.timer_status
+      - input_boolean.timer_type
+      - input_select.entity_filter_select
+      - input_select.timer_entity_select_friendly
+      # - input_select.timer_entity_select_hidden # restore this to show the actual entitie ids
+      - input_select.entity_start_action_select      
+      - input_select.entity_stop_action_select
+      # - input_select.timer_duration_preselect
+      # - input_select.timer_duration_preselect_live
+      - script.save_timer_entity
+      - script.delete_timer_entity
+      - script.delete_timer
+
+  timer_maintenance:
+    view: no
+    control: hidden
+    name: All Timer Maintenance
+    entities:
+      - script.scheduler
+      - script.synchronise_timers
+      - script.timers_backup
+      - script.timers_restore
+      - script.timers_reset
+      # - input_boolean.timer_sync
+      # - input_boolean.live_timer_sync
+      # - input_boolean.preset_duration_timer_sync
+      # - input_boolean.preset_live_duration_timer_sync
+      # - switch.test
+
+
+#   timer_old:
+    #     view: no
+    #     name: Timer Details
+    #     entities:
+    #       - input_select.timer_entity_select_friendly
+    #       - input_select.timer_entity_select_hidden
+    #       - input_select.timer_select
+    #       - input_text.entity_timer_name
+    #       - input_select.entity_start_action_select      
+    #       - input_select.entity_stop_action_select
+    #       - script.save_timer
+    #       - script.delete_timer      
+    #       - script.reset_timer
+    #       - input_boolean.testboolean
+    # #      - input_datetime.start_datetime
+    # #      - input_number.on_hour
+    # #      - input_number.on_minute
+    # #      - input_datetime.stop_datetime
+    # #      - input_number.off_hour
+    # #      - input_number.off_minute
+    # #      - input_number.on_duration_years
+    # #      - input_number.on_duration_days
+    # #      - input_number.on_duration_hours
+    # #      - input_number.on_duration_minutes
+    #       - group.my_sensors
+
+
+  timer_duration:
+    view: no
+    name: Timer Duration
+    entities:
+      - input_select.timer_duration_preselect
+      - input_number.on_duration_years
+      - input_number.on_duration_months
+      - input_number.on_duration_days
+      - input_number.on_duration_days_total
+      - input_number.on_duration_weeks_total
+      - input_number.on_duration_hours
+      - input_number.on_duration_minutes
+
+  timer_duration_live:
+    view: no
+    name: Live Timer Duration (NEXT activation)
+    entities:
+      - input_select.timer_duration_preselect_live
+      - input_number.on_duration_years_live
+      - input_number.on_duration_months_live
+      - input_number.on_duration_days_live
+      - input_number.on_duration_days_live_total
+      - input_number.on_duration_weeks_live_total
+      - input_number.on_duration_hours_live
+      - input_number.on_duration_minutes_live
+      # - script.start_reset_live_timer
+
+  timer_times:
+    view: no
+    name: Timer Start & Stop Times
+    entities:
+      - script.reset_datetimes
+
+      - input_datetime.start_datetime
+      - input_number.on_hour
+      - input_number.on_minute
+      - input_datetime.stop_datetime
+      - input_number.off_hour
+      - input_number.off_minute
+
+      - input_select.timer_start_sun_select
+      - input_number.on_hour_sun
+      - input_number.on_minute_sun
+      - input_select.timer_stop_sun_select
+      - input_number.off_hour_sun
+      - input_number.off_minute_sun
+      # - script.reset_timer
+
+  timer_rules:
+    view: no
+    name: Timer Rules
+    entities:
+      - input_select.timer_rule_select
+      - input_number.rule_interval
+      - input_select.timer_rule_select_by_weekday
+      - input_number.rule_count
+      - input_datetime.rule_until
+      - input_text.timer_rule
+
+  timer_tab:
+    name: Timers
+#    icon: mdi:account-multiple
+    view: yes
+    entities:
+      - group.local_times
+      - group.timer_management
+      - group.timer_times
+      - group.timer_duration_live_full
+      - group.timer_maintenance
+      - group.timer_rules
+      - group.timer_duration
+      - group.timer_duration_live
+
+  timer_duration_live_full:
+    view: no
+    name: Live Timer Duration Full (upcoming activations)
+    entities:
+      - input_select.timer_duration_preselect_live_start
+      - input_select.timer_duration_preselect_live_stop
+      - input_number.on_duration_years_live_start
+      - input_number.on_duration_years_live_stop
+      - input_number.on_duration_months_live_start
+      - input_number.on_duration_months_live_stop
+      - input_number.on_duration_days_live_start
+      - input_number.on_duration_days_live_stop
+      - input_number.on_duration_days_live_total_start
+      - input_number.on_duration_days_live_total_stop
+      - input_number.on_duration_weeks_live_total_start
+      - input_number.on_duration_weeks_live_total_stop
+      - input_number.on_duration_hours_live_start
+      - input_number.on_duration_hours_live_stop
+      - input_number.on_duration_minutes_live_start
+      - input_number.on_duration_minutes_live_stop
+      # - script.start_reset_live_timer
+      # - script.stop_reset_live_timer

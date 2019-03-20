@@ -1,0 +1,10 @@
+# Stop Time Sliders Update Stop Date and Time
+
+  stop_time_sliders_update_stop_date_and_time:
+    alias: "Stop Time Sliders Update Stop Date and Time"
+    sequence:
+      - service: input_datetime.set_datetime
+        data_template:
+          entity_id: input_datetime.stop_datetime
+          time: "{{ states.input_number.off_hour.state | int }}:{{ states.input_number.off_minute.state | int }}"
+          date: "{{states.input_datetime.stop_datetime.attributes.year}}-{{states.input_datetime.stop_datetime.attributes.month}}-{{states.input_datetime.stop_datetime.attributes.day}}"

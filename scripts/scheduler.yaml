@@ -1,0 +1,8 @@
+# SCHEDULER
+
+  scheduler:
+    alias: "Rerun Scheduler"
+    sequence:
+      - event: MANAGE_TIMERS
+        event_data:
+          mode: run_scheduler

@@ -1,0 +1,10 @@
+# Duration Sliders Update Stop Date and Time
+ 
+  duration_sliders_update_stop_date_and_time:
+    alias: "Duration Sliders Update Stop Date and Time"
+    sequence:
+      - service: input_datetime.set_datetime
+        data_template:
+          entity_id: input_datetime.stop_datetime
+          date: "{{(((states.input_datetime.start_datetime.attributes.timestamp)|int)+((((states.input_number.on_duration_years.state) |int) *31536000) |int)+((((states.input_number.on_duration_days.state) |int) *86400) |int)+((((states.input_number.on_duration_hours.state) |int) *3600) |int)+((((states.input_number.on_duration_minutes.state) |int) *60) |int)) | timestamp_custom('%Y-%m-%d', False)}}"
+          time: "{{(((states.input_datetime.start_datetime.attributes.timestamp)|int)+((((states.input_number.on_duration_years.state) |int) *31536000) |int)+((((states.input_number.on_duration_days.state) |int) *86400) |int)+((((states.input_number.on_duration_hours.state) |int) *3600) |int)+((((states.input_number.on_duration_minutes.state) |int) *60) |int)) | timestamp_custom('%H:%M', False)}}"

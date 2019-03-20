@@ -1,0 +1,10 @@
+  entity_start_action_select:
+    name: Start Time Action
+    options:
+     - Turn On
+     - Turn Off
+     - Toggle
+     - Custom code
+     - Do Nothing
+    initial: Turn On
+    icon: mdi:view-list

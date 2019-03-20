@@ -1,0 +1,13 @@
+  timer_duration_preselect_live:
+    name: Live Timer Duration Pre-select
+    options:
+     - 'Manual'
+     - '15 min'
+     - '30 min'
+     - '45 min'
+     - '1 hour'
+     - '2 hours'
+     - '1 day'
+     - '1 week'
+    initial: 'Manual'
+    icon: mdi:view-list

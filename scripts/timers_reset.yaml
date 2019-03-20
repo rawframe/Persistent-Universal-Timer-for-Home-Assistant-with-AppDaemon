@@ -1,0 +1,8 @@
+# TIMERS RESET
+
+  timers_reset:
+    alias: "Delete ALL Timers"
+    sequence:
+      - event: MANAGE_TIMERS
+        event_data:
+          mode: reset_timers

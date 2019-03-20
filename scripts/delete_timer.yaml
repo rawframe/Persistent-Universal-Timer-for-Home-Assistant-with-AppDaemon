@@ -1,0 +1,8 @@
+# DELETE TIMER
+
+  delete_timer:
+    alias: "Delete Timer"
+    sequence:
+      - event: MANAGE_TIMERS
+        event_data:
+          mode: delete_timer

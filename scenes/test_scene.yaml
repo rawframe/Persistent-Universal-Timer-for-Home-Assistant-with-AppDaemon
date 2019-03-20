@@ -1,0 +1,5 @@
+# TEST SCENE (turns on test switch)
+  - name: Test
+    entities:
+      switch.test: on
+

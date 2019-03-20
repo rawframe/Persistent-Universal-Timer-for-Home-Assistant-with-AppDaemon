@@ -1,0 +1,8 @@
+# SYNCHRONISE TIMERS
+
+  synchronise_timers:
+    alias: "Synchronise Timers"
+    sequence:
+      - event: MANAGE_TIMERS
+        event_data:
+          mode: synchronise_timers

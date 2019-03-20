@@ -1,0 +1,8 @@
+# TIMERS RESTORE
+
+  timers_restore:
+    alias: "Restore Timers"
+    sequence:
+      - event: MANAGE_TIMERS
+        event_data:
+          mode: restore_timers

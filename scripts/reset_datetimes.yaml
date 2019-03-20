@@ -1,0 +1,8 @@
+# RESET DATETIMES
+
+  reset_datetimes:
+    alias: "Reset Start & Stop Datetimes"
+    sequence:
+      - event: MANAGE_TIMERS
+        event_data:
+          mode: reset_datetimes

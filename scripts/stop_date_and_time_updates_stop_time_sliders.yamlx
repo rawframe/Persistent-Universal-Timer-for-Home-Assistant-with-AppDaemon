@@ -1,0 +1,13 @@
+# Stop Date and Time Updates Stop Time Sliders
+
+  stop_date_and_time_updates_stop_time_sliders:
+    alias: "Stop Date and Time Updates Stop Time Sliders"
+    sequence:
+      - service: input_number.set_value
+        data_template:
+          entity_id: input_number.off_hour
+          value: "{{(states.input_datetime.stop_datetime.attributes.timestamp | int | timestamp_custom('%H', False) | int) }}"
+      - service: input_number.set_value
+        data_template:
+          entity_id: input_number.off_minute
+          value: "{{(states.input_datetime.stop_datetime.attributes.timestamp | int | timestamp_custom('%M', False) | int) }}"

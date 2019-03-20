@@ -1,0 +1,7 @@
+# Turn Off Timer Automations
+
+  turn_off_timer_automations:
+    alias: "Turn off timer automations"
+    sequence:
+      - service: automation.turn_off
+        entity_id: automation.start_date_and_time_updates_start_and_stop_time_sliders_and_duration_sliders, automation.start_time_slider_updates_start_date_and_time_and_duration_sliders, automation.stop_date_and_time_updates_start_and_stop_time_sliders_and_duration_sliders, automation.stop_time_slider_updates_stop_date_and_time_and_duration_sliders, automation.update_stop_date_and_time_from_duration_sliders, automation.update_stop_date_and_time_from_live_duration_sliders

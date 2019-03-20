@@ -1,0 +1,6 @@
+  timer_rule:
+    name: Rrule
+#    min: 0
+#    max: 500
+    initial: ''
+#    pattern: '[a-fA-F0-9]*'

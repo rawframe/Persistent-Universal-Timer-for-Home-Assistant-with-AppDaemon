@@ -1,0 +1,53 @@
+datetime_updated:
+  module: datetime_updated
+  class: TimerDateTime
+  priority: 20
+
+time_sliders_updated:
+  module: time_sliders_updated
+  class: TimerSliders
+  constrain_input_boolean: input_boolean.timer_sync
+  priority: 25
+
+duration_sliders_updated:
+  module: duration_sliders_updated
+  class: DurationSliders
+  constrain_input_boolean: input_boolean.timer_sync
+  priority: 30
+
+live_duration_sliders_updated:
+  module: live_duration_sliders_updated
+  class: LiveDurationSliders
+  constrain_input_boolean: input_boolean.timer_sync
+  constrain_input_boolean: input_boolean.live_timer_sync
+  priority: 40
+
+live_duration:
+  module: live_duration
+  class: LiveDuration
+  constrain_input_boolean: input_boolean.timer_sync
+  priority: 35
+
+timer_input_select:
+  module: timer_input_select
+  class: DynamicTimerInputSelect
+  priority: 40
+
+entity_timer_name:
+  module: entity_timer_name
+  class: EntityTimerName
+
+timer_entity_input_select:
+  module: timer_entity_input_select
+  class: DynamicEntityInputSelect
+
+timer_management:
+  module: timer_management
+  class: Timer_Management
+  priority: 10
+
+timer_scheduler:
+  module: timer_scheduler
+  class: Timer_Scheduler
+  constrain_input_boolean: input_boolean.timers
+  priority: 15

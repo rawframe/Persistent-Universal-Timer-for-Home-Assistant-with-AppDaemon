@@ -1,0 +1,8 @@
+# SAVE TIMER ENTITY
+
+  save_timer_entity:
+    alias: "Add/Update Entity/Timer"
+    sequence:
+      - event: MANAGE_TIMERS
+        event_data:
+          mode: save_timer

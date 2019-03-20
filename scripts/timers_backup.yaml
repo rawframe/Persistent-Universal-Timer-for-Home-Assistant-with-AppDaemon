@@ -1,0 +1,8 @@
+# TIMERS BACKUP
+
+  timers_backup:
+    alias: "Backup Timers"
+    sequence:
+      - event: MANAGE_TIMERS
+        event_data:
+          mode: backup_timers

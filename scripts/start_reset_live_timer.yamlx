@@ -1,0 +1,46 @@
+# START RESET LIVE TIMER - copy of times reset but remove start reset?
+
+  start_reset_live_timer:
+    alias: "Start/Reset Live Timer"
+    sequence:
+
+# Start and Stop Date and Time Set to Current Date and Time
+      - service: input_datetime.set_datetime
+        data_template:
+          entity_id: input_datetime.start_datetime
+          time: "{{now().hour}}:{{now().minute}}"
+          date: "{{(now().date())}}"
+#          timestamp: "{{(as_timestamp(now()))}}"
+      - service: input_datetime.set_datetime
+        data_template:
+          entity_id: input_datetime.stop_datetime
+          time: "{{states.input_datetime.start_datetime.attributes.hour}}:{{states.input_datetime.start_datetime.attributes.minute}}"
+          date: "{{states.input_datetime.start_datetime.attributes.year}}-{{states.input_datetime.start_datetime.attributes.month}}-{{states.input_datetime.start_datetime.attributes.day}}"
+#          timestamp: "{{states.input_datetime.start_datetime.attributes.timestamp |int}}"
+
+# change this back after working to just run the live duration script
+# Update Live Timer Duration Sliders
+#      - service: input_number.set_value
+#        data_template:
+#          entity_id: input_number.on_duration_years_live
+#          value: "0"
+#      - service: input_number.set_value
+#        data_template:
+#          entity_id: input_number.on_duration_days_live
+#          value: "0"
+#      - service: input_number.set_value
+#        data_template:
+#          entity_id: input_number.on_duration_hours_live
+#          value: "0"
+#      - service: input_number.set_value
+#        data_template:
+#          entity_id: input_number.on_duration_minutes_live
+#          value: "0"
+
+# Update Live Timer Duration Sliders
+      - service: script.turn_on
+        entity_id: script.start_and_stop_date_and_time_updates_live_duration_sliders
+
+# test bit
+      - service: scene.turn_on
+        entity_id: scene.test

@@ -1,0 +1,10 @@
+  entity_stop_action_select:
+    name: Stop Time Action 
+    options:
+     - Turn Off
+     - Turn On
+     - Toggle 
+     - Do Nothing
+     - Custom code
+    initial: Toggle
+    icon: mdi:view-list

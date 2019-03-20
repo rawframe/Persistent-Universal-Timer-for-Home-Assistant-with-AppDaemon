@@ -1,0 +1,35 @@
+
+  timer_status:
+    name: Timer Status
+    initial: off
+    icon: mdi:timer
+
+  timer_type:
+    name: Countdown
+    initial: off
+    icon: mdi:timer-sand-empty
+
+  timers:
+    name: All Timers
+    initial: on
+    icon: mdi:calendar
+
+  timer_sync:
+    name: Timer Sync
+    initial: on
+    icon: mdi:progress-check
+
+  live_timer_sync:
+    name: Live Timer Sync
+    initial: on
+    icon: mdi:progress-check
+
+  preset_duration_timer_sync:
+    name: Preset Duration Timer Sync
+    initial: off
+    icon: mdi:progress-check
+
+  preset_live_duration_timer_sync:
+    name: Preset Live Duration Timer Sync
+    initial: off
+    icon: mdi:progress-check

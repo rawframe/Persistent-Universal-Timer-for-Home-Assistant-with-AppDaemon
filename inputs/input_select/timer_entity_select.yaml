@@ -1,0 +1,8 @@
+  timer_entity_select:
+    name: Select your device
+    options:
+     - Test Switch
+     - Dining Table Light
+     - Living Room Light
+#    initial: Test Switch
+    icon: mdi:view-list

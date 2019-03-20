@@ -1,0 +1,11 @@
+# Turn On Timer Automations
+
+  turn_on_timer_automations:
+    alias: "Turn on timer automations"
+    sequence: 
+
+      - delay:
+          milliseconds: '10'
+
+      - service: automation.turn_on
+        entity_id: automation.start_date_and_time_updates_start_and_stop_time_sliders_and_duration_sliders, automation.start_time_slider_updates_start_date_and_time_and_duration_sliders, automation.stop_date_and_time_updates_start_and_stop_time_sliders_and_duration_sliders, automation.stop_time_slider_updates_stop_date_and_time_and_duration_sliders, automation.update_stop_date_and_time_from_duration_sliders, automation.update_stop_date_and_time_from_live_duration_sliders

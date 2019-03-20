@@ -1,0 +1,7 @@
+  timer_select:
+    name: Select your Timer 
+    options:
+     - New Timer
+     - Countdown
+#    initial: New
+    icon: mdi:view-list

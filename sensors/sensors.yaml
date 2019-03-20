@@ -1,0 +1,37 @@
+  - platform: time_date
+    friendly_name: Current Date and Time
+    display_options:
+#      - 'time'
+#      - 'date'
+      - 'date_time'
+#      - 'time_utc'
+
+  - platform: time_date
+    friendly_name: Current Time
+    display_options:
+      - 'time'
+
+  - platform: time_date
+    friendly_name: "Current Date"
+    display_options:
+      - 'date'
+
+  - platform: template
+    sensors:
+      next_sunrise:
+        friendly_name: "Next Sunrise"
+        value_template: >
+          {{ as_timestamp(states.sun.sun.attributes.next_rising) | timestamp_custom(' %I:%M%p') | replace(" 0", "") }}
+        icon_template: mdi:weather-sunset-up
+
+      sunrise_to_sunset_duration:
+        friendly_name: "Sunrise to Sunset Duration"
+        value_template: >
+          {% set nr = as_timestamp(state_attr('sun.sun','next_rising')) %} {% set ns = as_timestamp(state_attr('sun.sun','next_setting')) %} {% if nr > ns %} {% set nr = nr - 60*60*24 %} {% endif %} {{ (ns - nr)|timestamp_custom('%H:%M',false) }}
+        icon_template: mdi:white-balance-sunny
+
+      next_sunset:
+        friendly_name: "Next Sunset"
+        value_template: >
+          {{ as_timestamp(states.sun.sun.attributes.next_setting) | timestamp_custom(' %I:%M%p') | replace(" 0", "") }}
+        icon_template: mdi:weather-sunset-down

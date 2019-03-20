@@ -1,0 +1,359 @@
+  on_hour:
+    name: Start Hour
+    icon: mdi:clock-start
+    initial: 0
+    min: 0
+    max: 23
+    step: 1
+#    mode: box
+
+  on_minute:
+    name: Start Minute
+    icon: mdi:clock-start
+    initial: 0
+    min: 0
+    max: 59
+    step: 1
+#    mode: box
+
+  off_hour:
+    name: Stop Hour
+    icon: mdi:clock-end
+    initial: 0
+    min: 0
+    max: 23
+    step: 1
+#    mode: box
+  off_minute:
+    name: Stop Minute
+    icon: mdi:clock-end
+    initial: 0
+    min: 0
+    max: 59
+    step: 1
+#    mode: box
+
+  on_duration_years:
+    name: Duration Years
+    icon: mdi:timer
+    initial: 0
+    min: 0
+    max: 10
+    step: 1
+#    mode: box
+
+#   on_duration_weeks:
+#     name: Duration Weeks
+#     icon: mdi:timer
+#     initial: 0
+#     min: 0
+#     max: 52
+#     step: 1
+# #    mode: box
+
+  on_duration_months:
+    name: Duration Months
+    icon: mdi:timer
+    initial: 0
+    min: 0
+    max: 11
+    step: 1
+#    mode: box
+
+  on_duration_days:
+    name: Duration Days
+    icon: mdi:timer
+    initial: 0
+    min: 0
+    max: 30
+    step: 1
+#    mode: box
+
+  on_duration_days_total:
+    name: or Total Duration Days
+    icon: mdi:timer
+    initial: 0
+    min: 0
+    max: 90
+    step: 1
+#    mode: box
+
+  on_duration_weeks_total:
+    name: or Total Duration Weeks
+    icon: mdi:timer
+    initial: 0
+    min: 0
+    max: 51
+    step: 1
+#    mode: box
+
+  on_duration_hours:
+    name: Duration Hours
+    icon: mdi:timer
+    initial: 0
+    min: 0
+    max: 23
+    step: 1
+#    mode: box
+    
+  on_duration_minutes:
+    name: Duration Minutes
+    icon: mdi:timer
+    initial: 0
+    min: 0
+    max: 59
+    step: 1
+#    mode: box
+
+  on_duration_years_live:
+    name: Years Remaining
+    icon: mdi:timer
+    initial: 0
+    min: 0
+    max: 10
+    step: 1
+#    mode: box
+
+  on_duration_months_live:
+    name: Months Remaining
+    icon: mdi:timer
+    initial: 0
+    min: 0
+    max: 11
+    step: 1
+#    mode: box
+
+  on_duration_days_live:
+    name: Days Remaining
+    icon: mdi:timer
+    initial: 0
+    min: 0
+    max: 30
+    step: 1
+#    mode: box
+
+  on_duration_days_live_total:
+    name: or Total Days Remaining
+    icon: mdi:timer
+    initial: 0
+    min: 0
+    max: 90
+    step: 1
+#    mode: box
+
+  on_duration_weeks_live_total:
+    name: or Total Weeks Remaining
+    icon: mdi:timer
+    initial: 0
+    min: 0
+    max: 51
+    step: 1
+#    mode: box
+
+  on_duration_hours_live:
+    name: Hours Remaining
+    icon: mdi:timer
+    initial: 0
+    min: 0
+    max: 23
+    step: 1
+#    mode: box
+    
+  on_duration_minutes_live:
+    name: Minutes Remaining
+    icon: mdi:timer
+    initial: 0
+    min: 0
+    max: 59
+    step: 1
+#    mode: box
+
+# ---------
+  on_duration_years_live_start:
+    name: Start Years Remaining
+    icon: mdi:timer
+    initial: 0
+    min: 0
+    max: 10
+    step: 1
+#    mode: box
+
+  on_duration_months_live_start:
+    name: Start Months Remaining
+    icon: mdi:timer
+    initial: 0
+    min: 0
+    max: 11
+    step: 1
+#    mode: box
+
+  on_duration_days_live_start:
+    name: Start Days Remaining
+    icon: mdi:timer
+    initial: 0
+    min: 0
+    max: 30
+    step: 1
+#    mode: box
+
+  on_duration_days_live_total_start:
+    name: or Start Total Days Remaining
+    icon: mdi:timer
+    initial: 0
+    min: 0
+    max: 90
+    step: 1
+#    mode: box
+
+  on_duration_weeks_live_total_start:
+    name: or Start Total Weeks Remaining
+    icon: mdi:timer
+    initial: 0
+    min: 0
+    max: 51
+    step: 1
+#    mode: box
+
+  on_duration_hours_live_start:
+    name: Start Hours Remaining
+    icon: mdi:timer
+    initial: 0
+    min: 0
+    max: 23
+    step: 1
+#    mode: box
+    
+  on_duration_minutes_live_start:
+    name: Start Minutes Remaining
+    icon: mdi:timer
+    initial: 0
+    min: 0
+    max: 59
+    step: 1
+#    mode: box
+
+# ---------
+  on_duration_years_live_stop:
+    name: Stop Years Remaining
+    icon: mdi:timer
+    initial: 0
+    min: 0
+    max: 10
+    step: 1
+#    mode: box
+
+  on_duration_months_live_stop:
+    name: Stop Months Remaining
+    icon: mdi:timer
+    initial: 0
+    min: 0
+    max: 11
+    step: 1
+#    mode: box
+
+  on_duration_days_live_stop:
+    name: Stop Days Remaining
+    icon: mdi:timer
+    initial: 0
+    min: 0
+    max: 30
+    step: 1
+#    mode: box
+
+  on_duration_days_live_total_stop:
+    name: or Stop Total Days Remaining
+    icon: mdi:timer
+    initial: 0
+    min: 0
+    max: 90
+    step: 1
+#    mode: box
+
+  on_duration_weeks_live_total_stop:
+    name: or Stop Total Weeks Remaining
+    icon: mdi:timer
+    initial: 0
+    min: 0
+    max: 51
+    step: 1
+#    mode: box
+
+  on_duration_hours_live_stop:
+    name: Stop Hours Remaining
+    icon: mdi:timer
+    initial: 0
+    min: 0
+    max: 23
+    step: 1
+#    mode: box
+    
+  on_duration_minutes_live_stop:
+    name: Stop Minutes Remaining
+    icon: mdi:timer
+    initial: 0
+    min: 0
+    max: 59
+    step: 1
+#    mode: box
+
+# sunrise sunset offsets
+  on_hour_sun:
+    name: Start Sun Hour Offset
+    icon: mdi:weather-sunset-up
+#    icon: mdi:clock-start
+    initial: 0
+    min: -12
+    max: 12
+    step: 1
+#    mode: box
+
+  on_minute_sun:
+    name: Start Sun Minute Offset
+    icon: mdi:weather-sunset-up
+#    icon: mdi:clock-start
+    initial: 0
+    min: -59
+    max: 59
+    step: 1
+#    mode: box
+
+  off_hour_sun:
+    name: Stop Sun Hour Offset
+    icon: mdi:weather-sunset-down
+#    icon: mdi:clock-start
+    initial: 0
+    min: -12
+    max: 12
+    step: 1
+#    mode: box
+
+  off_minute_sun:
+    name: Stop Sun Minute Offset
+    icon: mdi:weather-sunset-down
+#    icon: mdi:clock-start
+    initial: 0
+    min: -59
+    max: 59
+    step: 1
+#    mode: box
+
+
+  rule_interval:
+    name: Interval (every x)
+    icon: mdi:weather-sunset-down
+#    icon: mdi:clock-start
+    initial: 1
+    min: 1
+    max: 65
+    step: 1
+#    mode: box
+
+  rule_count:
+    name: 'Repetitions remaining (0=Off)'
+    icon: mdi:weather-sunset-down
+#    icon: mdi:clock-start
+    initial: 0
+    min: 0
+    max: 65
+    step: 1
+#    mode: box

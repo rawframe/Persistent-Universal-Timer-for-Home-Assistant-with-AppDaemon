@@ -1,0 +1,8 @@
+  timer_entity_select_hidden:
+    name: Selected Timer Entity
+    options:
+     - Test Switch
+     - Dining Table Light
+     - Living Room Light
+#    initial: Test Switch
+    icon: mdi:view-list

@@ -1,0 +1,11 @@
+  timer_rule_select:
+    name: Select Timer Rule
+    options:
+     - 'Off'
+     - DAILY
+     - WEEKLY
+     - HOURLY
+     - MINUTELY
+     - YEARLY
+    initial: 'Off'
+    icon: mdi:view-list

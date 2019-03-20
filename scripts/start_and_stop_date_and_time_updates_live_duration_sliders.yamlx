@@ -1,0 +1,26 @@
+# Start and Stop Date and Time Updates Live Duration Sliders
+
+  start_and_stop_date_and_time_updates_live_duration_sliders:
+    alias: "Start and Stop Date and Time Updates Live Duration Sliders"
+    sequence:
+#      - condition: template
+#        value_template: "{{ (states.input_datetime.start_datetime.attributes.timestamp | int) < (as_timestamp(now()) |int) }}"
+#      - condition: template
+#        value_template: "{{((states.input_datetime.stop_datetime.attributes.timestamp | int) > (as_timestamp(now()) |int)) }}"
+      - service: input_number.set_value
+        data_template:
+          entity_id: input_number.on_duration_years_live
+          value: "{% if (states.input_datetime.start_datetime.attributes.timestamp | int) > (as_timestamp(now()) |int) or (states.input_datetime.stop_datetime.attributes.timestamp | int) < (as_timestamp(now()) |int) %}0{% else %}{{(((states.input_datetime.stop_datetime.attributes.timestamp | int)-(as_timestamp(now()) |int)) | timestamp_custom('%Y', False)|int-1970)}}{% endif %}"
+      - service: input_number.set_value
+        data_template:
+          entity_id: input_number.on_duration_days_live
+          value: "{% if (states.input_datetime.start_datetime.attributes.timestamp | int) > (as_timestamp(now()) |int) or (states.input_datetime.stop_datetime.attributes.timestamp | int) < (as_timestamp(now()) |int) %}0{% else %}{{(((states.input_datetime.stop_datetime.attributes.timestamp | int) - (as_timestamp(now()) |int)) |
+  timestamp_custom('%j', False)|int-1)}}{% endif %}"
+      - service: input_number.set_value
+        data_template:
+          entity_id: input_number.on_duration_hours_live
+          value: "{% if (states.input_datetime.start_datetime.attributes.timestamp | int) > (as_timestamp(now()) |int) or (states.input_datetime.stop_datetime.attributes.timestamp | int) < (as_timestamp(now()) |int) %}0{% else %}{{((((states.input_datetime.stop_datetime.attributes.timestamp) - (as_timestamp(now()) |int)) | int |  timestamp_custom('%H', False))| int )}}{% endif %}"
+      - service: input_number.set_value
+        data_template:
+          entity_id: input_number.on_duration_minutes_live
+          value: "{% if (states.input_datetime.start_datetime.attributes.timestamp | int) > (as_timestamp(now()) |int) or (states.input_datetime.stop_datetime.attributes.timestamp | int) < (as_timestamp(now()) |int) %}0{% else %}{{((((states.input_datetime.stop_datetime.attributes.timestamp) - (as_timestamp(now()) |int)) | int |  timestamp_custom('%M', False))| int )}}{% endif %}"
