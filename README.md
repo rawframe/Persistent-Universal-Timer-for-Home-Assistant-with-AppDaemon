@@ -47,6 +47,7 @@
 - Ideally I would like to add to or create a true calendar that can provide similar options. At the time I couldn't find enough flexibility in mainstream free calenders (i.e.- remotely updatable custom fields or offline use). Then add the calendar as a HA side tab which shows upcoming and past timers.
 
 **Notes:**
+- To have the persistent timer functionality, Timer Restore will only automatically activate if AppD is loaded before HA reloads. (i.e. its listening for a HA restart).
 - RRule count does not decrease unless timer actually run, i.e. count will not decrease if the system is off or while the timer is off (i.e. the last scheduled occurrence was missed). The last run occurrence will hence be the last start and stop times saved before any re-syncing
 - Rrule docs suggest not to use rule count and until in the same rule but works in simple tests for me.
 - If sync has missed a lot of activations it may take some time to get all the iterations and receive the synchronised completion notification.
@@ -59,3 +60,5 @@
 - On timer save, sometimes the timer is not automatically reselected in the timer menu list. Loop selection issue?
 - Restart Auto Timer Restore can be temperamental ... maybe appd hass load order issue. Manual restore works as usual.
 - Next live occurrence compact views preselect doesn't distinguish between start or stop. (Can be changed but better to re-work whole system at once than put time into this).
+- Live duration presets do not reflect in next live duration preset option and appear as manual when one start or stop timer in a set surpass eachother. Logic used was makeshift.
+- Feedback loop occurs (datetimes updated, live timer, duration, and timer sync) which requires a manual restart on occasion! May be due to bad boolean app control and not using global var alternative. Better to solve on rebuild with modules, functions, and globals. ; especially if converted entirley to AppD.
