@@ -1,3 +1,5 @@
+![](Timer.gif)
+
 ### home assistant
 # General Purpose Timer for Home Assistant (devices, scripts, scenes, etc.)
 ### Author : rawframe
