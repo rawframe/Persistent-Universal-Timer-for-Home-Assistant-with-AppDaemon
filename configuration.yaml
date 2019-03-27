@@ -12,8 +12,8 @@ homeassistant:
   time_zone: Europe/London
   # Customization file
   # customize: !include customize.yaml
-  auth_providers:
-    - type: legacy_api_password
+  # auth_providers: # dont need anymore
+  #   - type: legacy_api_password # dont need anymore
 
 # Show links to resources in log and frontend
 #introduction:
@@ -27,7 +27,7 @@ config:
 http:
   # Secrets are defined in the file secrets.yaml
   # api_password: !secret http_password
-  api_password: password
+  api_password: xxxxx
   # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
   # base_url: example.duckdns.org:8123
 
@@ -64,6 +64,9 @@ sun:
 
 # Cloud
 #cloud:
+
+mqtt:
+  password: xxxxx
 
 scene: !include_dir_merge_list scenes/
 group: !include_dir_merge_named groups/

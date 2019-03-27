@@ -1,5 +1,5 @@
   - platform: time_date
-    friendly_name: Current Date and Time
+    # friendly_name: "Current Date and Time"
     display_options:
 #      - 'time'
 #      - 'date'
@@ -7,12 +7,12 @@
 #      - 'time_utc'
 
   - platform: time_date
-    friendly_name: Current Time
+    # friendly_name: "Current Time"
     display_options:
       - 'time'
 
   - platform: time_date
-    friendly_name: "Current Date"
+    # friendly_name: "Current Date"
     display_options:
       - 'date'
 

@@ -1,5 +1,6 @@
   local_times:
     view: no
+    control: hidden
     name: Current Date & Times
     entities:
       - sensor.date
@@ -17,7 +18,7 @@
       - input_boolean.timers
       - input_select.timer_select
       - input_text.entity_timer_name
-      - persistent_notification.timer_name
+      # - persistent_notification.timer_name
       - input_boolean.timer_status
       - input_boolean.timer_type
       - input_select.entity_filter_select
@@ -77,6 +78,7 @@
 
   timer_duration:
     view: no
+    control: hidden
     name: Timer Duration
     entities:
       - input_select.timer_duration_preselect
@@ -90,7 +92,8 @@
 
   timer_duration_live:
     view: no
-    name: Live Timer Duration (NEXT activation)
+    control: hidden
+    name: Timer Duration
     entities:
       - input_select.timer_duration_preselect_live
       - input_number.on_duration_years_live
@@ -104,6 +107,7 @@
 
   timer_times:
     view: no
+    control: hidden
     name: Timer Start & Stop Times
     entities:
       - script.reset_datetimes
@@ -125,6 +129,7 @@
 
   timer_rules:
     view: no
+    control: hidden
     name: Timer Rules
     entities:
       - input_select.timer_rule_select
@@ -150,6 +155,7 @@
 
   timer_duration_live_full:
     view: no
+    control: hidden
     name: Live Timer Duration Full (upcoming activations)
     entities:
       - input_select.timer_duration_preselect_live_start
