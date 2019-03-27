@@ -33,6 +33,7 @@
 
 **Future/Maybe:**
 - Make a quick start, per second accurate, countdown timer option. Current implementation is extension of primary schedule timer functionality and is a clunky countdown implementation.
+- Add menu option for All Light/Switches/Devices/etc.
 - Perhaps it now makes sense to run a sync before scheduler (but increases load) or just on timer selection.
 - Once timer save and automatic reselect bug is solved, apply reselect to rule timers to keep them looking live in the HA interface also.
 - Parse custom rrule on save using 'try:' to catch invalid entries.
